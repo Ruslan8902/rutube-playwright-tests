@@ -70,7 +70,8 @@
             - listitem:
                 - link "Файл для установки на Android"
             - listitem:
-                - link "Ярлык для iOS"
+                - link "Ярлык для iOS":
+                    - /url: https://rutube.ru/info/rutubeapp/
             - listitem:
                 - link "Установить из Huawei App Gallery"
             - listitem:

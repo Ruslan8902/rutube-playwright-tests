@@ -43,6 +43,7 @@ export class MainPage extends BasePage {
   async open() {
     this.page.goto('https://rutube.ru/');
   }
+
   async openFullMenu() {
     this.menuButtonLocator.click();
   }
@@ -50,6 +51,7 @@ export class MainPage extends BasePage {
   async changeThemeToWhite() {
     await this.changeThemeButtonLocator.click();
   }
+
   async headerHasCorrectAriaSnapShot() {
     await expect(this.headerLocator).toMatchAriaSnapshot({ name: 'headerAriaSnapshot.yml' });
   }
