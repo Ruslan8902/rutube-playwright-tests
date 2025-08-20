@@ -49,11 +49,11 @@ export class MainPage extends BasePage {
 
   // Actions
   async open() {
-    this.page.goto('https://rutube.ru/');
+    await this.page.goto('https://rutube.ru/');
   }
 
   async openFullMenu() {
-    this.menuButtonLocator.click();
+    await this.menuButtonLocator.click();
   }
 
   async openHeaderMenu() {
@@ -65,14 +65,14 @@ export class MainPage extends BasePage {
   }
 
   async openAddPopupList() {
-    this.headerAddButtonLocator.click();
+    await this.headerAddButtonLocator.click();
   }
 
   async openNotificationsPopup() {
-    this.headerNotificationsButtonLocator.click();
+    await this.headerNotificationsButtonLocator.click();
   }
   async openAuthorizationModal() {
-    this.headerLoginButtonLocator.click();
+    await this.headerLoginButtonLocator.click();
   }
 
   // Assetrions
