@@ -1,16 +1,28 @@
 import { test, expect } from '../../fixtures/fixtures';
-import { MainPage } from '../../pages/MainPage';
 
-test('Проверка доступности элементов хэдера', async ({ mainPage }) => {
-  await mainPage.headerHasCorrectAriaSnapShot();
+test('Проверка доступности элементов хэдера аторизованного пользователя', async ({
+  mainPageAuthorized,
+}) => {
+  await mainPageAuthorized.headerHasCorrectAriaSnapShot();
 });
 
-test('Проверка доступности элементов попапа уведомлений', async ({ mainPage }) => {
-  await mainPage.openNotificationsPopup();
-  await mainPage.notificationsPopupHasCorrectAriaSnapshot();
+test('Проверка доступности элементов попапа уведомлений аторизованного пользователя', async ({
+  mainPageAuthorized,
+}) => {
+  await mainPageAuthorized.openNotificationsPopup();
+  await mainPageAuthorized.notificationsPopupHasCorrectAriaSnapshot();
 });
 
-test('Проверка доступности элементов открытого меню', async ({ mainPage }) => {
-  await mainPage.openFullMenu();
-  await mainPage.fullMenuHasCorrectAriaSnapshot();
+test('Проверка доступности элементов открытого меню аторизованного пользователя', async ({
+  mainPageAuthorized,
+}) => {
+  await mainPageAuthorized.openFullMenu();
+  await mainPageAuthorized.fullMenuHasCorrectAriaSnapshot();
+});
+
+test('Проверка доступности элементов меню аторизованного пользователя в хэдере', async ({
+  mainPageAuthorized,
+}) => {
+  await mainPageAuthorized.openHeaderMenu();
+  await mainPageAuthorized.headerUserManuHasCorrectAriaSnapshot();
 });

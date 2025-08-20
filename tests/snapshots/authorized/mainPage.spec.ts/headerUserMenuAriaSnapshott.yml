@@ -1,0 +1,20 @@
+- img "Иконка канала channel64657349"
+- paragraph:
+  - link "channel64657349":
+    - /url: /channel/64657349/
+  - link:
+    - /url: /profile/info/edit/
+    - img
+- paragraph: ca****@mail.ru
+- list:
+  - listitem:
+    - link "Профиль":
+      - /url: /profile/
+  - listitem:
+    - link "Мой канал":
+      - /url: /channel/64657349/
+  - listitem:
+    - link "Студия RUTUBE":
+      - /url: https://studio.rutube.ru/
+- button "Выйти":
+  - img

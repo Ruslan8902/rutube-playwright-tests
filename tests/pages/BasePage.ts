@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import { expect, Locator, Page } from '@playwright/test';
 
 export class BasePage {
   readonly page: Page;
@@ -19,5 +19,9 @@ export class BasePage {
       .locator('.wdp-popup-overlay-module__overlay')
       .getByRole('button', { name: 'Закрыть' })
       .click();
+  }
+
+  protected async checkAriaSnapshot(locator: Locator, ariaName: string) {
+    await expect(locator).toMatchAriaSnapshot({ name: ariaName });
   }
 }
